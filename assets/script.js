@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  currentHour = dayjs().add(3, 'hour').hour();
+  currentHour = dayjs().add(0, 'hour').hour();
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -37,10 +37,5 @@ $(function () {
     $(this).find('.description').val(text);
   });
 
-  
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  // TODO: Add code to display the current date in the header of the page.
   $('#currentDay').text(dayjs().format('MMM d, YYYY'))
 });
